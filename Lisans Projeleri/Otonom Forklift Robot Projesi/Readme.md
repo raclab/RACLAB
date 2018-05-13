@@ -1,1 +1,6 @@
+OTONOM FORKLİFT ROBOT PROJESİ
+
+Ömer Emin Çınar - 131202104
+
+Ali Kemal Akçaöz - 141202056
 
