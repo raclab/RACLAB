@@ -1,0 +1,69 @@
+//Çizgi izleme kodlarý
+const int sag_i = 4; // motor sürücü ve sensör pinleri tanýmlandý
+const int sag_g = 5;
+const int sol_i = 7;
+const int sol_g = 6;
+const int sol_sensor = 2;
+const int sag_sensor = 3;
+int sol_durum, sag_durum; // sol ve sað sensörün durum deðiþkenleri tanýmlandý
+void setup()
+{
+  pinMode(sag_i, OUTPUT); // motor sürücü pinleri çýkýþ olarak atandý
+  pinMode(sag_g, OUTPUT);
+  pinMode(sol_i, OUTPUT);
+  pinMode(sol_g, OUTPUT);
+  
+  pinMode(sag_sensor, INPUT); // sensör pinleri giriþ pini olarak atandý
+  pinMode(sol_sensor, INPUT);
+}
+void loop()
+{
+  sol_durum = digitalRead(sol_sensor); // sol ve sað sensör okunup deðiþkenlere kaydedildi.
+  sag_durum = digitalRead(sag_sensor);
+
+  if (sol_durum == LOW && sag_durum == LOW) // iki sensör de siyah görmüyor ise motorlar ileri gidecek þekilde çalýþýtýrýldý.
+  {
+    digitalWrite(sag_i, HIGH);
+    digitalWrite(sag_g, LOW);
+    digitalWrite(sol_i, HIGH);
+    digitalWrite(sol_g, LOW);
+  }
+  else if (sol_durum == LOW && sag_durum == HIGH) // sað sensör siyah görüyor ise motorlar saða dönecek þekilde çalýþtýrýldý.
+  {
+    digitalWrite(sag_i, HIGH);
+    digitalWrite(sag_g, HIGH);
+    digitalWrite(sol_i, HIGH);
+    digitalWrite(sol_g, LOW);
+  }
+
+
+
+
+12
+  else if (sol_durum == HIGH && sag_durum == LOW) // sol sensör siyah görüyor ise motorlar sola dönecek þekilde çalýþtýrýldý.
+  {
+    digitalWrite(sag_i, HIGH);
+    digitalWrite(sag_g, LOW);
+    digitalWrite(sol_i, HIGH);
+    digitalWrite(sol_g, HIGH);
+  }
+  else  //eðer yukarýda þartlarýn 3 üde deðilse dur.
+  {
+    digitalWrite(sag_i, LOW);
+    digitalWrite(sag_g, LOW);
+    digitalWrite(sol_i, LOW);
+    digitalWrite(sol_g, LOW);
+  }
+  delay(25);                    
+  digitalWrite(sag_i, LOW); 
+  digitalWrite(sag_g, LOW);
+  digitalWrite(sol_i, LOW);
+  digitalWrite(sol_g, LOW);
+  delay(50);
+}
+
+
+
+
+
+
