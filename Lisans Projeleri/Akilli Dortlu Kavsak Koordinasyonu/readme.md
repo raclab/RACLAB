@@ -1,6 +1,8 @@
 
-**Akıllı Dörlü Kavşak Koordinasyonu Projesi**
+**Akıllı Dörlü Kavşak Koordinasyonu Projesi
+
 **141202032 - Elif Nur Çelik
+
 **141202062 - Ender Kurnaz
 
   Büyük şehirlerde gerçekleşmekte olan trafik yoğunluğundan kaynaklanan problemler gün geçtikçe daha da artmakta ve artık küçük 
