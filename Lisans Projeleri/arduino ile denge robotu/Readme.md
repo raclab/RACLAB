@@ -1,8 +1,8 @@
-`
-//MUSTAFA ÜNLÜ DENGE ROBOTU KODU 18380444956
-//kodlarda fazlalık icerikler bulunabilir, özellik ekleme cıkarma yaparken kalmıs olabilir.
-/*
-BLUETOOTH İLE KONTROL İÇİN  
+
+**//MUSTAFA ÜNLÜ DENGE ROBOTU KODU 18380444956**
+`//kodlarda fazlalık icerikler bulunabilir, özellik ekleme cıkarma yaparken kalmıs olabilir.`
+`/*`
+`BLUETOOTH İLE KONTROL İÇİN  `
 DENGE HASSAS AYARI == (+),(-)
 DENGE HASSAS İNCE AYARI == (a),(b)
 İLERİ HIZLI == (1)
@@ -195,4 +195,3 @@ setpoint = originalSetpoint - movingAngleOffset;
 else if (moveState == 2)
 setpoint = originalSetpoint + movingAngleOffset;
 } 
-`
