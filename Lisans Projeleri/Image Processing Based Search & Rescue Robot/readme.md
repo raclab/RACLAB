@@ -2,4 +2,5 @@ As a result of  the major developments in the robot technology, robots can now h
 In the proposed project, it is aimed to construct an image processing based search and rescue robot. In thıs project the design of the robot will be designed with Solid Works  and controlled with Raspberry Pi and Arduino development boards. The appropriate motor and wheel selection will be made so that the robot can move on rugged grounds. Image processing will be done using a camera module and the OpenCV library. The robot will be able to identify the specified object and move towards it. After approaching the object, the robot will hold the object with a clawed structure on it front and then bring it to the specified place and release it. In addition, some of the sites data like temperature, humidity and pressure will be sended to a laptop or a mobile phone using different kind of sensors. An ultrasonic sensor can be added so the robot would be able to avoid different kinds of obstacles.
 
 Muhammed Milad Alshames
+
 Kevser İrem Cömert
