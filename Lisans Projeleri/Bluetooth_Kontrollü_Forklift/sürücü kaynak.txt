@@ -1,0 +1,2 @@
+https://learn.sparkfun.com/tutorials/tb6612fng-hookup-guide?_ga=2.10914358.360098889.1519323346-1577069423.1519323346
+http://cagatayodabasi.blogspot.com.tr/2012/11/arduino-ve-tb6612fng-pwm-ile-dc-motor.html
