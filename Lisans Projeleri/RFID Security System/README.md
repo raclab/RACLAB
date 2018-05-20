@@ -1,69 +1,69 @@
-# RFID Güvenlik Sistemi
-**Hazırlayan: İrem KARABUDAK**
+# RFID GÃ¼venlik Sistemi
+**HazÄ±rlayan: Ä°rem KARABUDAK**
 
 ***
 
-Bu klasörde, RFID Güvenlik Sistemi projesinin kodlarına, projede yararlanılan kütüphane linklerine, ve medya içeriklerine yer verilmiştir.
+Bu klasÃ¶rde, RFID GÃ¼venlik Sistemi projesinin kodlarÄ±na, projede yararlanÄ±lan kÃ¼tÃ¼phane linklerine, ve medya iÃ§eriklerine yer verilmiÅŸtir.
 
 ***
 
-_**Projede Kullanılan Malzemeler:**_
+_**Projede KullanÄ±lan Malzemeler:**_
 
-*Arduino Pro(Atmega328P / 5v 16MHz)
-*Protoboard
-*3.7V 860mAh Li-Ion Battery
-*RF433MHz Tx modülü
-*TP4056 Battery Charger(5V 1A)
-*Switch
-*Step-Up modülü(Output:5V)
-*AMS1117 Voltage Regulator(Output:3.3V)
-*Arduino Logic Level Converter(3.3V-5V)
-*RFID-RC522 modülü(13.56 MHz)
-*S50 1K 13.56MHz RFID Kart x2
-*NTAG213 13.56MHz IC NFC Tag(MIFARE Ultralight)
-*Proje Kutusu(54mmx84mmx32mm)
-*220ohm Direnç x3
-*RGB Led
-*CP2102 USB to TTL Converter modülü
+* Arduino Pro(Atmega328P / 5v 16MHz)
+* Protoboard
+* 3.7V 860mAh Li-Ion Battery
+* RF433MHz Tx modÃ¼lÃ¼
+* TP4056 Battery Charger(5V 1A)
+* Switch
+* Step-Up modÃ¼lÃ¼(Output:5V)
+* AMS1117 Voltage Regulator(Output:3.3V)
+* Arduino Logic Level Converter(3.3V-5V)
+* RFID-RC522 modÃ¼lÃ¼(13.56 MHz)
+* S50 1K 13.56MHz RFID Kart x2
+* NTAG213 13.56MHz IC NFC Tag(MIFARE Ultralight)
+* Proje Kutusu(54mmx84mmx32mm)
+* 220ohm DirenÃ§ x3
+* RGB Led
+* CP2102 USB to TTL Converter modÃ¼lÃ¼
 
-_**Projede Alıcı Devresi İçin Kullanılan Malzemeler:**_
+_**Projede AlÄ±cÄ± Devresi Ä°Ã§in KullanÄ±lan Malzemeler:**_
 
-*Arduino Nano(Atmega328P / 5v 16MHz)
-*Mini Breadboard x2
-*RF433MHz Rx modülü
-*220ohm Direnç
-*Yeşil Led
-*Jumper kablolar
+* Arduino Nano(Atmega328P / 5v 16MHz)
+* Mini Breadboard x2
+* RF433MHz Rx modÃ¼lÃ¼
+* 220ohm DirenÃ§
+* YeÅŸil Led
+* Jumper kablolar
 
-_**Yazılımın Çalıştırılma Şekli:**_
+_**YazÄ±lÄ±mÄ±n Ã‡alÄ±ÅŸtÄ±rÄ±lma Åekli:**_
 
-*Yazılımın çalıştırılması için gerekli olan kütüphaneler aşağıdaki linkten indirilerek(versiyonuna dikkat edilmeli) Arduino IDE'deki "libraries" klasörüne atılır. Daha sonra Arduino, CP2102 USB to TTL modülü yardımıyla bilgisayara bağlanır ve "RFIDSecuritySystem.ino" uzantılı kod, "işlemci", "kart" ve "port" bilgileri(Atmega328P/Arduino Pro/COM...) seçildikten sonra yüklenir. Sistemin yazılımının yüklenmesi tamamlanmış olur.
+* YazÄ±lÄ±mÄ±n Ã§alÄ±ÅŸtÄ±rÄ±lmasÄ± iÃ§in gerekli olan kÃ¼tÃ¼phaneler aÅŸaÄŸÄ±daki linkten indirilerek(versiyonuna dikkat edilmeli) Arduino IDE'deki "libraries" klasÃ¶rÃ¼ne atÄ±lÄ±r. Daha sonra Arduino, CP2102 USB to TTL modÃ¼lÃ¼ yardÄ±mÄ±yla bilgisayara baÄŸlanÄ±r ve "RFIDSecuritySystem.ino" uzantÄ±lÄ± kod, "iÅŸlemci", "kart" ve "port" bilgileri(Atmega328P/Arduino Pro/COM...) seÃ§ildikten sonra yÃ¼klenir. Sistemin yazÄ±lÄ±mÄ±nÄ±n yÃ¼klenmesi tamamlanmÄ±ÅŸ olur.
 
-_**Edinilmesi Gereken Kütüphaneler ve Linkleri:**_
+_**Edinilmesi Gereken KÃ¼tÃ¼phaneler ve Linkleri:**_
 
-*MFRC522.h - https://github.com/miguelbalboa/rfid
-*RCSwitch.h(version: 2.6.2) - https://github.com/sui77/rc-switch
-
-***
-
-Sistemin kodu RFIDSecuritySystem.ino, alıcı kodu ise RF_Receiver.ino dosyasındadır.
+* MFRC522.h - https://github.com/miguelbalboa/rfid
+* RCSwitch.h(version: 2.6.2) - https://github.com/sui77/rc-switch
 
 ***
 
-_**Donanımın Bağlantısı ve Çalışma Şekli:**_
+Sistemin kodu RFIDSecuritySystem.ino, alÄ±cÄ± kodu ise RF_Receiver.ino dosyasÄ±ndadÄ±r.
 
-*Sistem elemanları protoboard üzerine yerleştirilmiş ve lehimlenmiştir. Bu elemanların GND pinleri birleştirilmiştir.
-*Proje 3.7V bir Li-Ion bataryadan gücünü almaktadır. 
-*Batarya TP4056 destekli şarj ve koruma devresine bağlıdır ve koruma devresinin çıkışları da bir switch yoluyla 5V step-up modülünün girişine bağlanmıştır. 5V step-up modülünün çıkışı hem Arduino Pro (5v 16Mhz) hem 433Mhz RF Tx modülü hem de AMS1117-3.3V LDO'yu beslemektedir.LDO'nun 3.3V çıkışı da RFID modülünün güç pinine bağlanmıştır. 
-*RFID modülünün, Tx modülünün ve RGB ledin Arduino ile olan bağlantı şekli kodun üst kısmındaki açıklama bölümünde verilmiştir.
+***
 
-_**Projenin Kullanım Şekli:**_
+_**DonanÄ±mÄ±n BaÄŸlantÄ±sÄ± ve Ã‡alÄ±ÅŸma Åekli:**_
 
-*Oluşturulan güvenlik sisteminin aktif hale gelebilmesi için switch sola çekilerek ON konumuna getirilir. Sistem çalıştırıldığında ilk alınan geri bildirim, ledin rengidir. Led, kullanıcıya önceki çalışmadaki son durum verisini(kırmızı(off)/yeşil(on)) bildirmektedir.
-*Değişim kartı bir kez okutulur, 500ms boyunca mavi geri bildirim ledi yanar. Daha sonra sisteme eklenmek istenen kart okutulur. Eğer sisteme ilk kez kart okutuluyorsa, 800ms; ikinci bir kart okutuluyorsa, 1600ms boyunca bildirim ledi(mavi) yanar ve kart ekleme işlemi tamamlanır.
-*Sistem, 2 kart slotuna sahiptir. Üçüncü bir kart sisteme eklenmek istendiğinde, sistem tanımsız kart olarak algılar ve kısa aralıklarla(300ms) 3 kez bildirim ledi yanıp söner.
-*Değişim kartı arka arkaya 2 kez okutulduğunda, sistemdeki tanımlı kartlar silinir. Kısa aralıklarla(100ms) 8 kez bildirim ledi yanıp söner.
-*Sistemde tanımlı olan bir kart okutulduğunda aç/kapat kontrol işlemini yapar. Yeşil(ON) ve kırmızı(OFF) led ile 1sn boyunca geri bildirim alınır ve bu sırada RF verici modülü ile açma ve kapatma sinyali 10ms aralıkla 2 defa gönderilir. Karşıda bir alıcı devresi olduğu taktirde bir başka cihazın da endüstriyel anahtarlama kontrolü aynı şekilde sağlanabilir.
+* Sistem elemanlarÄ± protoboard Ã¼zerine yerleÅŸtirilmiÅŸ ve lehimlenmiÅŸtir. Bu elemanlarÄ±n GND pinleri birleÅŸtirilmiÅŸtir.
+* Proje 3.7V bir Li-Ion bataryadan gÃ¼cÃ¼nÃ¼ almaktadÄ±r. 
+* Batarya TP4056 destekli ÅŸarj ve koruma devresine baÄŸlÄ±dÄ±r ve koruma devresinin Ã§Ä±kÄ±ÅŸlarÄ± da bir switch yoluyla 5V step-up modÃ¼lÃ¼nÃ¼n giriÅŸine baÄŸlanmÄ±ÅŸtÄ±r. 5V step-up modÃ¼lÃ¼nÃ¼n Ã§Ä±kÄ±ÅŸÄ± hem Arduino Pro (5v 16Mhz) hem 433Mhz RF Tx modÃ¼lÃ¼ hem de AMS1117-3.3V LDO'yu beslemektedir.LDO'nun 3.3V Ã§Ä±kÄ±ÅŸÄ± da RFID modÃ¼lÃ¼nÃ¼n gÃ¼Ã§ pinine baÄŸlanmÄ±ÅŸtÄ±r. 
+* RFID modÃ¼lÃ¼nÃ¼n, Tx modÃ¼lÃ¼nÃ¼n ve RGB ledin Arduino ile olan baÄŸlantÄ± ÅŸekli kodun Ã¼st kÄ±smÄ±ndaki aÃ§Ä±klama bÃ¶lÃ¼mÃ¼nde verilmiÅŸtir.
+
+_**Projenin KullanÄ±m Åekli:**_
+
+* OluÅŸturulan gÃ¼venlik sisteminin aktif hale gelebilmesi iÃ§in switch sola Ã§ekilerek ON konumuna getirilir. Sistem Ã§alÄ±ÅŸtÄ±rÄ±ldÄ±ÄŸÄ±nda ilk alÄ±nan geri bildirim, ledin rengidir. Led, kullanÄ±cÄ±ya Ã¶nceki Ã§alÄ±ÅŸmadaki son durum verisini(kÄ±rmÄ±zÄ±(off)/yeÅŸil(on)) bildirmektedir.
+* DeÄŸiÅŸim kartÄ± bir kez okutulur, 500ms boyunca mavi geri bildirim ledi yanar. Daha sonra sisteme eklenmek istenen kart okutulur. EÄŸer sisteme ilk kez kart okutuluyorsa, 800ms; ikinci bir kart okutuluyorsa, 1600ms boyunca bildirim ledi(mavi) yanar ve kart ekleme iÅŸlemi tamamlanÄ±r.
+* Sistem, 2 kart slotuna sahiptir. ÃœÃ§Ã¼ncÃ¼ bir kart sisteme eklenmek istendiÄŸinde, sistem tanÄ±msÄ±z kart olarak algÄ±lar ve kÄ±sa aralÄ±klarla(300ms) 3 kez bildirim ledi yanÄ±p sÃ¶ner.
+* DeÄŸiÅŸim kartÄ± arka arkaya 2 kez okutulduÄŸunda, sistemdeki tanÄ±mlÄ± kartlar silinir. KÄ±sa aralÄ±klarla(100ms) 8 kez bildirim ledi yanÄ±p sÃ¶ner.
+* Sistemde tanÄ±mlÄ± olan bir kart okutulduÄŸunda aÃ§/kapat kontrol iÅŸlemini yapar. YeÅŸil(ON) ve kÄ±rmÄ±zÄ±(OFF) led ile 1sn boyunca geri bildirim alÄ±nÄ±r ve bu sÄ±rada RF verici modÃ¼lÃ¼ ile aÃ§ma ve kapatma sinyali 10ms aralÄ±kla 2 defa gÃ¶nderilir. KarÅŸÄ±da bir alÄ±cÄ± devresi olduÄŸu taktirde bir baÅŸka cihazÄ±n da endÃ¼striyel anahtarlama kontrolÃ¼ aynÄ± ÅŸekilde saÄŸlanabilir.
 
 
 
