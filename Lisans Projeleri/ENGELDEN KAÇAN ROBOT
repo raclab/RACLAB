@@ -1,0 +1,107 @@
+ARDUINO KODU
+#define echoPin 12 //Ultrasonik sensörün echo pini Arduino'nun 12.pinine
+#define trigPin 13 //Ultrasonik sensörün trig pini Arduino'nun 13.pinine tanımlandı.
+#define MotorR1 7
+#define MotorR2 6
+#define MotorRE 9  // Motor pinlerini tanımlıyoruz.
+#define MotorL1 5
+#define MotorL2 4
+#define MotorLE 3
+long sure, uzaklik; //süre ve uzaklık diye iki değişken tanımlıyoruz.
+void setup() {
+// ultrasonik sensör Trig pininden ses dalgaları gönderdiği için OUTPUT (Çıkış),
+  // bu dalgaları Echo pini ile geri aldığı için INPUT (Giriş) olarak tanımlanır.
+  pinMode(echoPin, INPUT);
+  pinMode(trigPin, OUTPUT);
+  pinMode(MotorL1, OUTPUT);
+  pinMode(MotorL2, OUTPUT);
+  pinMode(MotorLE, OUTPUT); //Motorlarımızı çıkış olarak tanımlıyoruz.
+  pinMode(MotorR1, OUTPUT);
+  pinMode(MotorR2, OUTPUT);
+  pinMode(MotorRE, OUTPUT);
+  Serial.begin(9600);}
+  void loop() {
+ digitalWrite(trigPin, LOW); //sensör pasif hale getirildi
+  delayMicroseconds(5);
+  digitalWrite(trigPin, HIGH); //Sensore ses dalgasının üretmesi için emir verildi
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW); //Yeni dalgaların üretilmemesi için trig pini LOW konumuna getirildi
+sure = pulseIn(echoPin, HIGH); //ses dalgasının geri dönmesi için geçen sure ölçülüyor
+  uzaklik = sure / 29.1 / 2; //ölçülen süre uzaklığa çevriliyor
+
+  Serial.println(uzaklik);
+  if (uzaklik < 15) // Uzaklık 15'den küçük ise,
+{
+ geri();  // 150 ms geri git
+ delay(150);
+ sag();  // 250 ms sağa dön
+ delay(250);
+  }
+  else {  // değil ise,
+    ileri(); // ileri git
+  }
+}
+void ileri(){  // Robotun ileri yönde hareketi için fonksiyon tanımlıyoruz.
+digitalWrite(MotorR1, HIGH); // Sağ motorun ileri hareketi aktif
+digitalWrite(MotorR2, LOW); // Sağ motorun geri hareketi pasif
+analogWrite(MotorRE, 150); // Sağ motorun hızı 150
+digitalWrite(MotorL1, HIGH); // Sol motorun ileri hareketi aktif
+digitalWrite(MotorL2, LOW); // Sol motorun geri hareketi pasif
+analogWrite(MotorLE, 150); // Sol motorun hızı 150
+}
+void sag(){ // Robotun sağa dönme hareketi için fonksiyon tanımlıyoruz.
+ digitalWrite(MotorR1, HIGH); // Sağ motorun ileri hareketi aktif
+  digitalWrite(MotorR2, LOW); // Sağ motorun geri hareketi pasif
+  analogWrite(MotorRE, 0); // Sağ motorun hızı 0 (Motor duruyor)
+
+  digitalWrite(MotorL1, HIGH); // Sol motorun ileri hareketi aktif
+  digitalWrite(MotorL2, LOW); // Sol motorun geri hareketi pasif
+  analogWrite(MotorLE, 150); // Sol motorun hızı 150
+}
+void geri(){ // Robotun geri yönde hareketi için fonksiyon tanımlıyoruz.
+digitalWrite(MotorR1, LOW); // Sağ motorun ileri hareketi pasif
+digitalWrite(MotorR2, HIGH); // Sağ motorun geri hareketi aktif
+analogWrite(MotorRE, 150); // Sağ motorun hızı 150
+digitalWrite(MotorL1, LOW); // Sol motorun ileri hareketi pasif
+digitalWrite(MotorL2, HIGH); // Sol motorun geri hareketi aktif
+analogWrite(MotorLE, 150); // Sol motorun hızı 150
+}
+
+
+
+PROJENİN AMACI
+
+Ultrasonik sensör İle karşIlaştIğImIz engellerİ algIlayIp buna göre yön değİştİren bİr robot yapTIM.
+Robotumuzun hIzInI ve yönünü bİr motor sürücü İle kontrol Ettim.
+
+Projede kullanIlan malzemeler 
+
+ARDUİNO
+Arduino, mikrokontrolcü kartları ve yazılım paketinden oluşan bir programlama platformudur
+
+HC-SR04 MESAFE SENSÖRÜ
+Hc-sr04 ultrasonik sensör sonar kullanarak karşısındaki nesneye olan mesafesini hesaplayan bir input kaynağıdır
+5V DC elektrikle çalIŞAN 15 miliamper güç tüketen bir sensördür.
+2 cm 4 metre arası ölçüm yapabiliyor.
+Trigerden güç verdiğimizde sensör hoparlöründen ultrasonik ses yaymaya başlar.
+
+ sure = pulseIn(echo , HIGH);
+  mesafe = (sure / 2) / 28.5;
+
+Buradaki 28.5 nasıl geldiğini açıklayalım;
+
+Sesin hızı 0 derecede  331m/sn alınır .
+
+Ortamın sıcaklığına göre sesin hızını ;
+ 
+331x(1+T/273)^1/2 =V
+
+ formülü ile bulunur
+ 
+L298N MOTOR SÜRÜCÜ
+24V'a kadar olan motorları sürmek için hazırlanmış olan bu motor sürücü kartı, iki kanallı olup, kanal başına 2A akım vermektedir
+Birbirinden bağımsız olarak iki ayrı motoru kontrol edebilir.
+
+
+
+bu ses dalgalarI bir engele Çarparak sensör mikrofon trafIndan algIlanmasInI sağlIYOR VE ECHO PİNİNE GÜÇ GÖNDEREREK ARDUİNOYA  SENSÖRÜN ÖNÜNDE BİR CİSİM OLDUĞU BİLGİSİ İLETİLİYOR.
