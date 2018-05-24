@@ -4,11 +4,11 @@ nevbot Dosyası indirildikten sonra dosya içerisinde 'catkin_make' yapılarak d
 
 Robotu Gazebo Simülasyon ortamında çalıştırmak için;
 
-  roslaunch nevbot_gazebo model.launch 
+    roslaunch nevbot_gazebo model.launch 
 
 Robotu Rviz Simülasyon ortamında çalıştırmak için;
 
-  roslaunch nevbot_description view_model.launch 
+    roslaunch nevbot_description view_model.launch 
 
 Robot ile harita çıkarma için öncelikle robot gazebo ortamında çalıştırılır.
 
