@@ -1,4 +1,4 @@
-# AUVSI SUAS 2019 OBJECT AVOIDANCE GÖREVİ
+# AUVSI SUAS 2019 OBSTACLE AVOIDANCE GÖREVİ
 **Hazırlayan: Uğur Can HOŞSÖZ**
 
 Bu klasörde, **AUVSI SUAS** yarışması için hazırlanan matematik tabanlı kodlar, bu kodların matematiği ve algoritmaları verilmiştir.
