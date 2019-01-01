@@ -2,9 +2,13 @@
 
 # OPENCV KURULUMU
 
+#### ROS Kinetic ile birlikte opencv3.2 sürümü kurulu olarak geldiği için opencv kurulumu yapmaya gerek yoktur. python 2.7 de opencv direk import edilebilir.
+
+Kurulum yapmak isteyenler için;
+
 ### Metod1:
 	sudo apt-get install python-opencv
-Komut ile Opencv Kurulması Halinde python2 için Linux'ta kamera fonksiyonu çalışmayacaktır. python3 için bu yöntem ile kurulum gerçekleştirilebilir. Windows içinde bu yöntem kullanılabilir.
+Komut ile Opencv Kurulması Halinde Linux'ta kamera fonksiyonu çalışmayacaktır.
 
 ### Metod2:
 	sudo apt-get update

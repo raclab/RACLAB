@@ -1,6 +1,6 @@
-# Selçuk Üniversitesi Lisans Projeleri
+# Konya Teknik Üniversitesi Lisans Projeleri
 
-**Projelerinizi kendi proje adınızdaki bir klasör ile lütfen buraya kaydediniz.**
+## **Projelerinizi eğitim döneminizin klasörüne kendi proje adınızda klasör oluşturarak kaydediniz.**
 
 Proje Klasörünüzü **upload file** butonuna tıklayarak yükleye bilirsiniz. 
 
@@ -10,4 +10,4 @@ Proje Kasörünü Github üzerinden oluşturmak için öncelikle **create new fi
 
 *Klasör isimleri Türkçe karakter içermemelidir.*
 
-**Lütfen proje açıklamalarını Readme.md dosyasına yazınız.**
+## **Lütfen proje açıklamalarını Readme.md dosyasına yazınız. Projelerinizi Readme dosyası olmadan yüklemeyiniz.**
