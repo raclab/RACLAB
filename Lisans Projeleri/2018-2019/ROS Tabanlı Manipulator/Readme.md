@@ -1,11 +1,11 @@
 ### Proje dosyaları içerisinde ws_ires adlı klasör çalışmaya hazır halde bulunmaktadır.
-Paketi kullanmak için git clone komutunu kullanabilirsiniz.###
+Paketi kullanmak için git clone komutunu kullanabilirsiniz.
 
-### Dosya ROS kinetic versiyonuna uygun olarak hazırlanmıştır.### 
+### Dosya ROS kinetic versiyonuna uygun olarak hazırlanmıştır.
 
-### ROS ve MoveIt kurulumları gerekmektedir. ###
+### ROS ve MoveIt kurulumları gerekmektedir.
 
-### Manipulatorun çizimlerininde bazı değişiklikler yapılması gerekmektedir.###
+### Manipulatorun çizimlerininde bazı değişiklikler yapılması gerekmektedir.
 
 ROS tabanlı manipülatör projesinde tasarlanan manipülatörü ROS ve MoveIt ile çalışması esas alınmıştır.
 Proje kapsamında Nema17, Nema16, Nema23, step motor modelleri kullanıldı.
