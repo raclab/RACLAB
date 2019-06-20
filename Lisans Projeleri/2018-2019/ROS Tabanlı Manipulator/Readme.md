@@ -19,4 +19,4 @@ Kullanılan yazılım dili Python'dur.
 
 Proje Videosu: https://www.linkedin.com/in/turgay-ada-307b59134/
 
-trgyada@gmail.com
+######iletişim: trgyada@gmail.com
