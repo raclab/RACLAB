@@ -1,5 +1,6 @@
 ### Proje dosyaları içerisinde ws_ires adlı klasör çalışmaya hazır halde bulunmaktadır.
-Paketi kullanmak için git clone komutunu kullanabilirsiniz.
+
+### Paketi kullanmak için git clone komutunu kullanabilirsiniz.
 
 ### Dosya ROS kinetic versiyonuna uygun olarak hazırlanmıştır.
 
